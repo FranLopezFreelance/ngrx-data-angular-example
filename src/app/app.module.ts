@@ -5,18 +5,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core';
+import { AppStoreModule } from './store/app-store.module';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'heroes' },
   {
     path: 'heroes',
     loadChildren: () =>
-      import('app/heroes/heroes.module').then(m => m.HeroesModule)
+      import('../app/heroes/heroes.module').then(m => m.HeroesModule)
   },
   {
     path: 'villains',
     loadChildren: () =>
-      import('app/villains/villains.module').then(m => m.VillainsModule)
+      import('../app/villains/villains.module').then(m => m.VillainsModule)
   }
 ];
 
@@ -26,7 +27,8 @@ const routes: Routes = [
     BrowserAnimationsModule,
     CoreModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AppStoreModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
