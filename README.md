@@ -1,4 +1,4 @@
-<img src="https://github.com/FranLopezFreelance/ngrx-data-angular-example/tree/master/src/ngrx-data.png" />
+<a href="https://github.com/FranLopezFreelance/ngrx-data-angular-example/tree/master/src/ngrx-data.png">=)</a>
 
 # NgRx Data Lab
 
