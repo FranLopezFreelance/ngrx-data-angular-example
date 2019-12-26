@@ -1,3 +1,5 @@
+(https://github.com/FranLopezFreelance/ngrx-data-angular-example/tree/master/src/ngrx-data.png)
+
 # NgRx Data Lab
 
 Want to learn how to use NgRx without all of the boilerplate? Try out [ngrx-data](https://github.com/johnpapa/angular-ngrx-data) with our quickstart!
@@ -99,6 +101,7 @@ Then add the following line into the `imports` array.
 ```
 
 Next, we need to import the app store module into our app module. Add the following line into the `imports` array in `app.module.ts`
+
 ```typescript
   AppStoreModule,
 ```
@@ -199,13 +202,17 @@ update(hero: Hero) {
 The only change to our template is to look at the observable of `heroes$` instead of the former array of heroes. Change the `*ngIf` by adding the `async` pipe and labelling the result as `heroes`.
 
 ```html
-  <div *ngIf="heroes$ | async as heroes">
+<div *ngIf="heroes$ | async as heroes"></div>
 ```
 
 Also find the `loading` reference in this template file and change it to the following:
 
 ```html
-  <mat-spinner *ngIf="loading$ | async;else heroList" mode="indeterminate" color="accent"></mat-spinner>
+<mat-spinner
+  *ngIf="loading$ | async;else heroList"
+  mode="indeterminate"
+  color="accent"
+></mat-spinner>
 ```
 
 Now repeat these steps for the `VillainsComponent`.
@@ -228,11 +235,11 @@ In the application, add, update, and remove heroes and villains. As you do this,
 
 In retrospect, here are the changes we made to our app to add NgRx via the ngrx-data library.
 
-* installed our dependencies
-* added these files `store/app-store.module.ts` and `store/entity-metadata.ts`
-* told NgRx and ngrx-data about our entities
-* refactored and simplified our data services `heroes/hero.service.ts` and `villains/villain.service.ts`
-* refactored and simplified our container components `heroes/heroes.component.ts` and `villains/villains.component.ts`
+- installed our dependencies
+- added these files `store/app-store.module.ts` and `store/entity-metadata.ts`
+- told NgRx and ngrx-data about our entities
+- refactored and simplified our data services `heroes/hero.service.ts` and `villains/villain.service.ts`
+- refactored and simplified our container components `heroes/heroes.component.ts` and `villains/villains.component.ts`
 
 ## What we accomplished
 
