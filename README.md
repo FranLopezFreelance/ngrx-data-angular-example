@@ -1,4 +1,4 @@
-(https://github.com/FranLopezFreelance/ngrx-data-angular-example/tree/master/src/ngrx-data.png)
+![Ngrx (with NgRx Data)](https://github.com/FranLopezFreelance/ngrx-data-angular-example/tree/master/src/ngrx-data.png)
 
 # NgRx Data Lab
 
