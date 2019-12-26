@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs/operators';
 import { Hero } from '../../core';
 import { HeroService } from '../hero.service';
 import { Observable } from 'rxjs';
@@ -46,7 +45,7 @@ export class HeroesComponent implements OnInit {
   }
 
   enableAddMode() {
-    this.selected = <any>{};
+    this.selected = null;
   }
 
   select(hero: Hero) {

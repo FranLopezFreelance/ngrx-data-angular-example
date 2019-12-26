@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { finalize } from 'rxjs/operators';
 import { Villain } from '../../core';
 import { VillainService } from '../villain.service';
 import { Observable } from 'rxjs';
